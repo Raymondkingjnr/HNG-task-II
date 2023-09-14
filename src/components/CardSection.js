@@ -15,7 +15,7 @@ const CardSection = ({ data }) => {
         </button>
       </div>
       <div className="card-list">
-        {data.map((movie, index) => {
+        {data.slice(0, 10).map((movie, index) => {
           return <Card movieData={movie} index={index} key={movie.id} />;
         })}
       </div>

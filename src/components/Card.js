@@ -34,6 +34,7 @@ const Card = ({ movieData }) => {
       <h5 data-testid="movie-title">
         {movieData.title ? movieData.title : movieData.original_title}
       </h5>
+
       <div
         onClick={handleLike}
         className={`${like ? "red-icon" : "card-icon"}`}

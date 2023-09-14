@@ -21,7 +21,7 @@ const Hero = () => {
       } = await axios.get(
         `${TMDB_BASE_URL}/${type}/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${search}`
       );
-
+      // console.log(results);
       setMovies(results);
     } catch (error) {
       alert("error fetching movie", error);

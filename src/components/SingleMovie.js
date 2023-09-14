@@ -22,9 +22,11 @@ const SingleMovie = () => {
     }
   };
 
+  // console.log(singleMovie);
+
   useEffect(() => {
     fetchSingleMovie();
-  });
+  }, []);
 
   const releaseDate = singleMovie?.release_date;
   const dateInUTC = new Date(releaseDate).toUTCString();
