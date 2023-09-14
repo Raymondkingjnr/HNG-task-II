@@ -25,7 +25,7 @@ const Card = ({ movieData }) => {
       />
       <div className="flex">
         <h4 data-testid="movie-release-date">
-          {moment(movieData.release_date).format("YYYY")}
+          USA {moment(movieData.release_date).format("YYYY")}
         </h4>
         <Link to={`/card/${movieData.id}`} className="movie-link">
           <p>View</p>
