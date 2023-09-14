@@ -14,6 +14,13 @@ const CardSection = ({ data }) => {
           </span>
         </button>
       </div>
+      {data.length === 0 ? (
+        <h3 style={{ textAlign: "center", paddingTop: "2rem" }}>
+          Movie Not Found
+        </h3>
+      ) : (
+        ""
+      )}
       <div className="card-list">
         {data.slice(0, 10).map((movie, index) => {
           return <Card movieData={movie} index={index} key={movie.id} />;

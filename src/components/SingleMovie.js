@@ -12,7 +12,7 @@ const SingleMovie = () => {
   const fetchSingleMovie = async () => {
     try {
       const { data } = await axios(
-        `${TMDB_BASE_URL}/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}`
+        `${TMDB_BASE_URL}/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&append_to_response=videos,reviews,recommendations,credits`
       );
 
       setSingleMovie(data);
@@ -22,7 +22,7 @@ const SingleMovie = () => {
     }
   };
 
-  // console.log(singleMovie);
+  console.log(singleMovie);
 
   useEffect(() => {
     fetchSingleMovie();
@@ -58,9 +58,27 @@ const SingleMovie = () => {
             })}
           </div>
         </div>
-        <p data-testid="movie-overview" className="over-view">
-          {singleMovie?.overview}
-        </p>
+        <div className="infos">
+          <div>
+            <p data-testid="movie-overview" className="over-view">
+              {singleMovie?.overview}
+            </p>
+            <div className="director">
+              {singleMovie?.reviews?.results
+                ?.slice(0, 1)
+                ?.map((item, index) => {
+                  return (
+                    <h2 index={index} key={item.id}>
+                      Director:{" "}
+                      <span style={{ color: "tomato", fontWeight: "500" }}>
+                        {item.author}
+                      </span>
+                    </h2>
+                  );
+                })}
+            </div>
+          </div>
+        </div>
         <Link to={"/"}>
           <button className="btn-back">Going Back?</button>
         </Link>
