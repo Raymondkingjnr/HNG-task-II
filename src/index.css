@@ -268,7 +268,10 @@ p {
   display: flex;
   flex-direction: column;
   /* border: #ff0000 2px solid; */
-  width: 300px;
+  width: 250px;
+}
+.card img {
+  width: 100%;
 }
 .card-icon {
   position: absolute;
@@ -333,6 +336,20 @@ p {
   color: #000;
   font-family: "Poppins";
 }
+@media screen and (max-width: 900px) {
+  .card img {
+    width: 100%;
+  }
+  .card {
+    width: 200px;
+  }
+  .card-icon {
+    font-size: 0.7rem;
+  }
+  .red-icon {
+    font-size: 0.7rem;
+  }
+}
 @media screen and (max-width: 600px) {
   .card img {
     width: 100%;
@@ -372,11 +389,99 @@ p {
 /* //////////////////////////////////////////////////////// */
 
 /* SingleMovie starts*/
-
+.singleMovie {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 25px;
+}
+.singleMovie aside {
+  border: #8d8c8c 2px solid;
+  padding-top: 1.5rem;
+  /* width: 300px; */
+  /* height: 100vh; */
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.top-nav {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  gap: 10px;
+  padding-right: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.top-nav img {
+  width: 30px;
+}
+.down-notes {
+  max-width: 200px;
+  border: tomato 1px solid;
+  border-radius: 10px;
+  background: rgb(254, 238, 235);
+  margin: 1rem;
+  padding: 1rem;
+}
+.down-notes h3 {
+  font-size: 13px;
+  color: rgb(88, 88, 88);
+  font-weight: 600;
+}
+.start_playing {
+  padding: 7px;
+  border-radius: 30px;
+  background: rgb(253, 174, 160);
+  border: none;
+  color: rgb(248, 50, 15);
+  width: 150px;
+  font-family: "Poppins";
+  font-weight: 800;
+  cursor: pointer;
+}
+.logout {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  margin-top: 1.5rem;
+  padding-left: 2rem;
+  gap: 10px;
+  cursor: pointer;
+}
+.logout h3 {
+  font-size: 13px;
+  color: rgb(88, 88, 88);
+  font-weight: 600;
+}
+.down-notes p {
+  font-size: 12px;
+  font-weight: 400;
+  color: gray;
+}
 .singleMovie main {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
   padding-top: 2rem;
+}
+li {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding-bottom: 1.5rem;
+  cursor: pointer;
+  gap: 15px;
+  padding-left: 2rem;
+}
+
+.li-movies {
+  background: rgb(253, 174, 160);
+  padding-left: 2rem;
+  border-right: #ff0000 5px solid;
+  padding: -5px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 .singleMovie main img {
   width: 100%;
@@ -400,7 +505,8 @@ p {
   border: tomato 1px solid;
   border-radius: 40px;
   width: 150px;
-  padding-top: 0.4rem;
+  /* padding-top: 0.4rem; */
+  padding: 7px;
   cursor: pointer;
 }
 .time {
@@ -421,15 +527,24 @@ p {
 @media screen and (max-width: 900px) {
   .singleMovie {
     margin: 2rem;
+    width: 95%;
+  }
+  .genres .genre-btn {
+    padding: 7px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .singleMovie {
     margin: 1rem;
+    width: 90%;
+  }
+  .singleMovie aside {
+    display: none;
   }
   .singleMovie main img {
     height: 300px;
+    /* margin-right: 1rem; */
   }
   .time {
     margin-right: 0.5rem;
@@ -437,7 +552,7 @@ p {
 
   .genres .genre-btn {
     width: 120px;
-    padding-bottom: 0.5rem;
+    padding: 2px;
     font-size: 12px;
   }
 }

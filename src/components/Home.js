@@ -5,6 +5,7 @@ import { BsFillPlayCircleFill } from "react-icons/bs";
 // import tomato from "../images/tomatos.png";
 import axios from "axios";
 import Navbar from "./Navbar";
+
 import CardSection from "./CardSection";
 
 const Home = () => {

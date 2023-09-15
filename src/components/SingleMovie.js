@@ -2,6 +2,11 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { MOVIE_URL, TMDB_BASE_URL } from "../constant";
+import logo from "../images/tv.png";
+import { PiTelevisionSimpleLight } from "react-icons/pi";
+import { LiaHomeSolid } from "react-icons/lia";
+import { BiCameraMovie } from "react-icons/bi";
+import { IoCalendarOutline, IoLogOutOutline } from "react-icons/io5";
 
 // import moment from "moment";
 
@@ -33,10 +38,45 @@ const SingleMovie = () => {
 
   return (
     <div className="singleMovie">
+      <aside>
+        <div className="top-nav">
+          <img src={logo} alt="" />
+          <h3>MovieBox</h3>
+        </div>
+
+        <li>
+          <LiaHomeSolid /> <p>Home</p>
+        </li>
+
+        <p className="li-movies">
+          <BiCameraMovie /> <p>Movies</p>
+        </p>
+
+        <li>
+          <PiTelevisionSimpleLight />
+          <p>Tv Series</p>
+        </li>
+
+        <li>
+          <IoCalendarOutline /> <p>Up Coming</p>
+        </li>
+
+        <div className="down-notes">
+          <h3>
+            Play movie quizes <br /> and earn <br /> free tickets
+          </h3>
+          <p>50k people are playing now</p>
+          <button className="start_playing">Start Playing</button>
+        </div>
+        <div className="logout">
+          <IoLogOutOutline /> <h3>Log Out</h3>
+        </div>
+      </aside>
       <main>
         <img
           src={`${MOVIE_URL}${singleMovie?.backdrop_path}`}
           alt="movie_poster"
+          data-testid="movie-poster"
         />
         <div className="details">
           <h4 data-testid="movie-title">
@@ -46,12 +86,17 @@ const SingleMovie = () => {
           </h4>
           <div className="time flex">
             <p data-testid="movie-release-date">{dateInUTC}</p>
-            <p data-testid=" movie-runtime">{singleMovie?.runtime} mins</p>
+            <p data-testid="movie-runtime">{singleMovie?.runtime} mins</p>
           </div>
-          <div className="genres">
+          <div className="genres" data-testid="movie-genres">
             {singleMovie?.genres?.slice(0, 2)?.map((genres, index) => {
               return (
-                <p index={index} key={genres.id} className="genre-btn">
+                <p
+                  index={index}
+                  key={genres.id}
+                  className="genre-btn"
+                  data-testid="movie-genres"
+                >
                   {genres.name}
                 </p>
               );
