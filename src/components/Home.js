@@ -7,7 +7,7 @@ import axios from "axios";
 import Navbar from "./Navbar";
 import CardSection from "./CardSection";
 
-const Hero = () => {
+const Home = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
@@ -84,4 +84,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;

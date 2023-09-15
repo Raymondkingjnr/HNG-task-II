@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Hero from "./components/Hero";
+import Home from "./components/Home";
 import SingleMovie from "./components/SingleMovie";
 import { Footer } from "./components/Footer";
 
@@ -10,7 +10,7 @@ function App() {
       {/* <Hero /> */}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Hero />} />
+          <Route path="/" element={<Home />} />
           <Route path="/card/:id" element={<SingleMovie />} />
         </Routes>
         <Footer />
