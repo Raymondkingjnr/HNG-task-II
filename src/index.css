@@ -398,8 +398,6 @@ p {
 .singleMovie aside {
   border: #8d8c8c 2px solid;
   padding-top: 1.5rem;
-  /* width: 300px; */
-  /* height: 100vh; */
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
@@ -441,7 +439,6 @@ p {
 .logout {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   margin-top: 1.5rem;
   padding-left: 2rem;
   gap: 10px;
@@ -464,7 +461,7 @@ p {
 }
 li {
   display: flex;
-  /* justify-content: center; */
+
   align-items: center;
   padding-bottom: 1.5rem;
   cursor: pointer;
