@@ -49,13 +49,24 @@ p {
   gap: 2rem;
   align-items: center;
   padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-right: 1rem;
   color: #fff;
 }
 .logo {
   display: flex;
   gap: 1rem;
   left: 0;
+}
+.sign {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sign p {
+  font-weight: 700;
+}
+.sign img {
+  width: 25px;
 }
 .logo img {
   object-fit: contain;
