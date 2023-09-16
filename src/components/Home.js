@@ -5,7 +5,7 @@ import { BsFillPlayCircleFill } from "react-icons/bs";
 // import tomato from "../images/tomatos.png";
 import axios from "axios";
 import Navbar from "./Navbar";
-
+import { Footer } from "./Footer";
 import CardSection from "./CardSection";
 
 const Home = () => {
@@ -25,8 +25,7 @@ const Home = () => {
       // console.log(results);
       setMovies(results);
     } catch (error) {
-      alert("error fetching movie", error);
-      throw error;
+      alert(error.message);
     } finally {
       setLoading(false);
     }
@@ -81,6 +80,7 @@ const Home = () => {
       ) : (
         <CardSection data={movies} />
       )}
+      <Footer />
     </div>
   );
 };
