@@ -7,6 +7,7 @@ import { PiTelevisionSimpleLight } from "react-icons/pi";
 import { LiaHomeSolid } from "react-icons/lia";
 import { BiCameraMovie } from "react-icons/bi";
 import { IoCalendarOutline, IoLogOutOutline } from "react-icons/io5";
+import { CiPlay1 } from "react-icons/ci";
 
 // import moment from "moment";
 
@@ -73,11 +74,16 @@ const SingleMovie = () => {
         </div>
       </aside>
       <main>
-        <img
-          src={`${MOVIE_URL}${singleMovie?.backdrop_path}`}
-          alt="movie_poster"
-          data-testid="movie-poster"
-        />
+        <div className="movie-card">
+          <img
+            src={`${MOVIE_URL}${singleMovie?.backdrop_path}`}
+            alt="movie_poster"
+            data-testid="movie-poster"
+          />
+          <div className="play-icon">
+            <CiPlay1 style={{ color: "white" }} />
+          </div>
+        </div>
         <div className="details">
           <h4 data-testid="movie-title">
             {singleMovie?.title

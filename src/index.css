@@ -423,6 +423,24 @@ p {
 .top-nav img {
   width: 30px;
 }
+.movie-card {
+  position: relative;
+}
+.play-icon {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  /* color: white; */
+  font-size: 30px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
 .down-notes {
   max-width: 200px;
   border: tomato 1px solid;
@@ -546,6 +564,16 @@ li {
   .singleMovie {
     margin: 1rem;
     width: 90%;
+  }
+  .play-icon {
+    top: 40%;
+    left: 45%;
+
+    font-size: 25px;
+    padding: 1rem;
+    width: 25px;
+    height: 25px;
+    text-align: center;
   }
   .singleMovie aside {
     display: none;
