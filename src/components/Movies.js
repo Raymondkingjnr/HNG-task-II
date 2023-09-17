@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { AiFillHeart } from "react-icons/ai";
 // const date = moment().format("YYYY");
 
-const Card = ({ movieData }) => {
+const Movies = ({ movieData }) => {
   const [like, setLike] = useState(false);
 
   const handleLike = () => {
@@ -27,7 +27,7 @@ const Card = ({ movieData }) => {
         <h4 data-testid="movie-release-date">
           {moment(movieData.release_date).format("YYYY")}
         </h4>
-        <Link to={`/card/${movieData.id}`} className="movie-link">
+        <Link to={`/movies/${movieData.id}`} className="movie-link">
           <p>View</p>
         </Link>
       </div>
@@ -45,4 +45,4 @@ const Card = ({ movieData }) => {
   );
 };
 
-export default Card;
+export default Movies;

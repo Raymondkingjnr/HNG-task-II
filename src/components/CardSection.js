@@ -1,6 +1,6 @@
 import React from "react";
 import { GrFormNext } from "react-icons/gr";
-import Card from "./Card";
+import Movies from "./Movies";
 
 const CardSection = ({ data }) => {
   return (
@@ -23,7 +23,7 @@ const CardSection = ({ data }) => {
       )}
       <div className="card-list">
         {data.slice(0, 10).map((movie, index) => {
-          return <Card movieData={movie} index={index} key={movie.id} />;
+          return <Movies movieData={movie} index={index} key={movie.id} />;
         })}
       </div>
     </div>
