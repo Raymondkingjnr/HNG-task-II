@@ -53,9 +53,9 @@ const SingleMovie = () => {
           <LiaHomeSolid /> <p>Home</p>
         </li>
 
-        <p className="li-movies">
+        <li className="li-movies">
           <BiCameraMovie /> <p>Movies</p>
-        </p>
+        </li>
 
         <li>
           <PiTelevisionSimpleLight />

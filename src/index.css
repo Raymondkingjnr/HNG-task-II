@@ -501,12 +501,10 @@ li {
   background: rgb(253, 174, 160);
   padding-left: 2rem;
   border-right: #ff0000 5px solid;
-  padding: -5px;
-  margin-bottom: 1.5rem;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  /* padding-top: 1rem; */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .singleMovie main img {
   width: 100%;
