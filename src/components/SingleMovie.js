@@ -84,7 +84,7 @@ const SingleMovie = () => {
         <main>
           <div className="movie-card">
             <img
-              src={`${MOVIE_URL}${singleMovie?.backdrop_path}`}
+              src={`${MOVIE_URL}${singleMovie?.backdrop_path} `}
               alt="movie_poster"
               data-testid="movie-poster"
             />

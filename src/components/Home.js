@@ -15,12 +15,12 @@ const Home = () => {
 
   const fetchMovies = async (search) => {
     setLoading(true);
-    const type = search ? "search" : "discover";
+    // const type = search ? "search" : "discover";
     try {
       const {
         data: { results },
       } = await axios.get(
-        `${TMDB_BASE_URL}/${type}/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${search}`
+        `${TMDB_BASE_URL}/movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}&query=${search}`
       );
       // console.log(results);
       setMovies(results);
