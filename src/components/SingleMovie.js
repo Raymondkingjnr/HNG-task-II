@@ -13,6 +13,7 @@ import { CiPlay1 } from "react-icons/ci";
 
 const SingleMovie = () => {
   const { id } = useParams();
+  const movie_id = id;
   const [singleMovie, setSingleMovie] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -20,7 +21,7 @@ const SingleMovie = () => {
     setLoading(true);
     try {
       const { data } = await axios(
-        `${TMDB_BASE_URL}/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&append_to_response=videos,reviews,recommendations,credits`
+        `${TMDB_BASE_URL}/movie/${movie_id}?api_key=${process.env.REACT_APP_API_KEY}&append_to_response=videos,reviews,recommendations,credits`
       );
 
       setSingleMovie(data);
